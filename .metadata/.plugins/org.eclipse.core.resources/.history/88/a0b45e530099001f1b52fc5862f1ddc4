@@ -1,9 +1,0 @@
-package com.javaweb.repository.entity;
-
-import jakarta.persistence.Id;
-
-public class BaseEntity {
-	@Id
-	private Long id;
-	
-}
