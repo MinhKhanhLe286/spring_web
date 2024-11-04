@@ -14,16 +14,16 @@ public abstract class BaseEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name = "createDate")
+	@Column
 	private Date createDate;
 	
-	@Column(name = "createBy")
+	@Column
 	private String createBy;
 	
-	@Column(name = "modifiedDate")
+	@Column
 	private Date modifyDate;
 	
-	@Column(name = "modifiedBy")
+	@Column
 	private String modifiedBy;
 	
 	

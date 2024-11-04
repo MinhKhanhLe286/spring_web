@@ -2,6 +2,8 @@ package com.javaweb.repository.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -12,12 +14,23 @@ public class BookEntity extends BaseEntity {
 	private String name;
 	@Column(name = "thumnail", columnDefinition= "TEXT")
 	private String thumnail;
+	public CategoryEntity getCategory() {
+		return category;
+	}
+	public void setCategory(CategoryEntity category) {
+		this.category = category;
+	}
 	@Column(name = "title")
 	private String  title;
 	@Column(name = "discription")
 	private String discription;
 	@Column
 	private String contents;
+	
+	@ManyToOne
+	@JoinColumn(name = "category_id")
+	private CategoryEntity category;
+	
 	
 	public String getContents() {
 		return contents;
